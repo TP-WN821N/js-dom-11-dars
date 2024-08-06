@@ -7,52 +7,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 
 <body>
-  <div class="flex items-center flex-col gap-8 w-full pt-16">
-    <div class="flex w-1/2 gap-4">
+  <div class="flex items-center flex-col gap-8 w-full pt-16 px-4">
+    <div class="flex w-full max-w-[450px] gap-4">
       <input class="border border-solid outline-none w-4/5 py-2 px-3 rounded focus:border-blue-600" type="text"
         placeholder="Task name" id="task_value">
-      <button class="border border-solid w-1/5 py-2 px-3 rounded bg-blue-600 text-white text-lg"
+      <button class="border border-solid py-2 px-3 rounded w-1/5 bg-blue-600 text-white text-lg"
         id="add_btn">Add</button>
     </div>
-    <div class="bg-gray-200 flex flex-col gap-2 p-5 w-1/2" id="task_list">
-      <div class="bg-white flex items-center px-3 py-2 justify-between">
-        <div class="flex items-center gap-2">
-          <input class="w-6 h-6" type="checkbox">
-          <div>
-            <p class="text-lg font-medium text-gray-600 leading-5">Create a Todo list</p>
-            <p class="text-[11px] text-gray-700 leading-4">5:23 AM, 01/06/2024</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <div class="bg-gray-300 w-8 h-8 flex justify-center items-center rounded">
-            <i class=" fa-solid fa-trash"></i>
-          </div>
-          <div class="bg-gray-300 w-8 h-8 flex justify-center items-center rounded">
-            <i class="fa-solid fa-pen"></i>
-          </div>
-        </div>
+    <div class="bg-gray-200 max-w-[450px] flex flex-col gap-2 p-5 w-full" id="task_list"></div>
+    <div class="w-full flex max-w-[450px] justify-between items-center py-1 px-3" style="border: 1px solid #eee;">
+      <div>
+        <p>Task count: <span id="tasks_count">0</span></p>
       </div>
-      <div class="bg-white flex items-center px-3 py-2 justify-between">
-        <div class="flex items-center gap-2">
-          <input class="w-6 h-6" type="checkbox">
-          <div>
-            <p class="text-lg font-medium text-gray-600 leading-5">Create a Todo list</p>
-            <p class="text-[11px] text-gray-700 leading-4">5:23 AM, 01/06/2024</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <div class="bg-gray-300 w-8 h-8 flex justify-center items-center rounded">
-            <i class=" fa-solid fa-trash"></i>
-          </div>
-          <div class="bg-gray-300 w-8 h-8 flex justify-center items-center rounded">
-            <i class="fa-solid fa-pen"></i>
-          </div>
-        </div>
-      </div>
+      <button class="border border-solid w-1/5 rounded bg-red-600 text-white text-lg" id="delete_tasks">
+        Delete
+      </button>
     </div>
   </div>
 
