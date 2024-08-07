@@ -103,7 +103,7 @@ function taskToggle(index) {
 
 
 function editeToggle(index) {
-  let newTask_name = prompt()
+  let newTask_name = prompt("Qanday task ga o'zgartirmoqchisiz?", `${userDate[index].name}`)
   console.log(userDate[index]);
   if (newTask_name.trim().length) {
     userDate[index].name = newTask_name
